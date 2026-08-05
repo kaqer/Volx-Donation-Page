@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Inter, Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 
@@ -12,16 +12,24 @@ html{
 
 
 body{
-    background:#050b14;
+
+    background:#05070c;
+
     color:white;
+
     overflow-x:hidden;
+
 }
 
 
 a{
+
     text-decoration:none;
+
     color:white;
+
 }
+
 
 
 /* HEADER */
@@ -30,17 +38,22 @@ a{
 header{
 
     position:fixed;
+
     top:0;
+
     width:100%;
 
+    padding:25px 8%;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
 
-    padding:22px 8%;
+    justify-content:space-between;
 
-    background:rgba(5,11,20,.75);
-    backdrop-filter:blur(18px);
+    background:rgba(5,7,12,.75);
+
+    backdrop-filter:blur(20px);
 
     border-bottom:1px solid rgba(0,170,255,.15);
 
@@ -50,36 +63,17 @@ header{
 
 
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-
-
 .logo{
 
-    font-size:34px;
+    font-size:35px;
+
     font-weight:1000;
 
     letter-spacing:8px;
 
     color:#00aaff;
 
-    text-shadow:
-    0 0 20px #00aaff;
-
-}
-
-
-.brand span{
-
-    color:#7c91aa;
-
-    font-size:12px;
-
-    letter-spacing:3px;
+    text-shadow:0 0 25px #00aaff;
 
 }
 
@@ -95,13 +89,15 @@ nav{
 }
 
 
+
 nav a{
 
-    color:#9fb2c9;
+    color:#9caec2;
 
     transition:.3s;
 
 }
+
 
 
 nav a:hover{
@@ -113,15 +109,16 @@ nav a:hover{
 
 
 
-.discord-btn{
+
+.header-btn{
 
     background:#00aaff;
 
-    padding:12px 28px;
+    padding:14px 30px;
 
-    border-radius:12px;
+    border-radius:50px;
 
-    font-weight:800;
+    font-weight:900;
 
     transition:.3s;
 
@@ -129,12 +126,11 @@ nav a:hover{
 
 
 
-.discord-btn:hover{
+.header-btn:hover{
 
-    box-shadow:
-    0 0 30px #00aaff;
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
+    box-shadow:0 0 35px #00aaff;
 
 }
 
@@ -159,13 +155,11 @@ nav a:hover{
 
     padding:120px 8% 60px;
 
-    overflow:hidden;
-
 }
 
 
 
-.hero-bg{
+.background{
 
     position:absolute;
 
@@ -174,8 +168,11 @@ nav a:hover{
     background:
 
     linear-gradient(
-    rgba(5,11,20,.45),
-    rgba(5,11,20,1)
+
+    rgba(5,7,12,.45),
+
+    rgba(5,7,12,1)
+
     ),
 
     url("17973036-48FB-4C2E-9E34-B42FD5C6E56C.png");
@@ -185,13 +182,11 @@ nav a:hover{
 
     background-position:center;
 
-    filter:saturate(1.2);
-
 }
 
 
 
-.hero-bg:after{
+.background:after{
 
     content:"";
 
@@ -200,10 +195,15 @@ nav a:hover{
     inset:0;
 
     background:
+
     radial-gradient(
+
     circle,
+
     rgba(0,170,255,.35),
-    transparent 55%
+
+    transparent 60%
+
     );
 
 }
@@ -216,38 +216,30 @@ nav a:hover{
 
     z-index:2;
 
-    max-width:850px;
+    max-width:900px;
 
 }
 
 
 
-.status{
-
-    display:inline-block;
-
-    padding:10px 20px;
-
-    border-radius:50px;
-
-    background:rgba(0,170,255,.15);
-
-    border:1px solid #00aaff;
+.small-title{
 
     color:#00e5ff;
 
-    margin-bottom:30px;
+    letter-spacing:6px;
 
-    font-weight:800;
+    font-weight:900;
+
+    margin-bottom:25px;
 
 }
 .hero h1{
 
-    font-size:90px;
+    font-size:85px;
 
-    line-height:.95;
+    line-height:1;
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
     margin-bottom:25px;
 
@@ -255,43 +247,41 @@ nav a:hover{
 
 
 
-.hero-content p{
+.hero p{
 
-    color:#a8bdd3;
+    color:#b4c4d6;
 
-    font-size:20px;
+    font-size:21px;
 
     line-height:1.6;
 
-    max-width:700px;
+}
 
-    margin:auto;
+
+
+/* BIG BUTTONS */
+
+
+.hero-buttons{
+
+    margin-top:45px;
 
 }
 
 
 
-/* BUTTONS */
-
-
-.buttons{
-
-    margin-top:40px;
-
-}
-
-
-
-.primary-btn,
-.secondary-btn{
+.main-btn,
+.second-btn{
 
     display:inline-block;
 
-    padding:16px 35px;
+    padding:18px 45px;
 
     margin:10px;
 
-    border-radius:14px;
+    border-radius:50px;
+
+    font-size:18px;
 
     font-weight:900;
 
@@ -301,7 +291,7 @@ nav a:hover{
 
 
 
-.primary-btn{
+.main-btn{
 
     background:#00aaff;
 
@@ -309,18 +299,17 @@ nav a:hover{
 
 
 
-.primary-btn:hover{
-
-    box-shadow:
-    0 0 35px #00aaff;
+.main-btn:hover{
 
     transform:translateY(-5px);
+
+    box-shadow:0 0 40px rgba(0,170,255,.8);
 
 }
 
 
 
-.secondary-btn{
+.second-btn{
 
     border:2px solid #00aaff;
 
@@ -328,11 +317,12 @@ nav a:hover{
 
 
 
-.secondary-btn:hover{
+.second-btn:hover{
 
     background:#00aaff;
 
 }
+
 
 
 
@@ -351,131 +341,62 @@ nav a:hover{
 
 .section h2{
 
-    font-size:45px;
+    font-size:48px;
 
-    margin-bottom:50px;
-
-}
-
-
-
-/* ABOUT */
-
-
-.feature-box{
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:45px;
-
-    background:
-
-    linear-gradient(
-    145deg,
-    rgba(0,170,255,.15),
-    rgba(255,255,255,.03)
-    );
-
-
-    border:1px solid rgba(0,170,255,.25);
-
-    border-radius:30px;
+    margin-bottom:60px;
 
 }
 
 
 
-.feature-box p{
-
-    color:#b8c8d8;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-}
+/* FEATURES */
 
 
+.feature-grid{
 
-/* SUPPORT */
-
-
-.support-grid{
-
-    max-width:1300px;
+    max-width:1200px;
 
     margin:auto;
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
 
-    gap:25px;
+    gap:30px;
 
 }
 
 
 
-.support-card{
+.feature{
 
-    position:relative;
+    padding:40px;
 
-    padding:35px;
-
-    background:#091522;
+    background:rgba(255,255,255,.04);
 
     border:1px solid rgba(0,170,255,.2);
 
-    border-radius:25px;
+    border-radius:30px;
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
 
 
-.support-card:hover{
+.feature:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
     border-color:#00aaff;
 
-    box-shadow:
-    0 0 35px rgba(0,170,255,.2);
-
 }
 
 
 
-.number{
+.feature h3{
 
-    font-size:45px;
-
-    font-weight:900;
-
-    color:#00aaff;
-
-    opacity:.5;
-
-}
-
-
-
-.support-card h3{
-
-    font-size:28px;
-
-    margin:15px 0;
-
-}
-
-
-
-.support-card h4{
-
-    font-size:40px;
+    font-size:26px;
 
     margin-bottom:15px;
 
@@ -483,41 +404,113 @@ nav a:hover{
 
 
 
-.support-card p{
+.feature p{
 
-    color:#8fa5bb;
+    color:#9caec2;
 
-    margin-bottom:25px;
+    line-height:1.6;
 
 }
 
 
 
-.support-card a{
 
-    display:inline-block;
+/* PRICING */
+
+
+.pricing{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.price-card{
+
+    padding:40px 30px;
+
+    background:#090e18;
+
+    border:1px solid rgba(0,170,255,.2);
+
+    border-radius:30px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+
+
+.price-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#00aaff;
+
+    box-shadow:0 0 35px rgba(0,170,255,.25);
+
+}
+
+
+
+.price-card h3{
+
+    font-size:25px;
+
+}
+
+
+
+.price-card h4{
+
+    font-size:45px;
+
+    margin:25px 0;
+
+}
+
+
+
+.price-card p{
+
+    color:#9caec2;
+
+    min-height:60px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.price-btn{
+
+    display:block;
+
+    padding:16px;
 
     background:#00aaff;
 
-    padding:12px 25px;
+    border-radius:50px;
 
-    border-radius:12px;
-
-    font-weight:bold;
+    font-weight:900;
 
 }
 
 
 
-.featured{
-
-    border:2px solid #00aaff;
-
-}
-
-
-
-.badge{
+.label{
 
     position:absolute;
 
@@ -527,28 +520,43 @@ nav a:hover{
 
     background:#00aaff;
 
-    padding:6px 12px;
+    padding:7px 15px;
 
-    border-radius:20px;
+    border-radius:50px;
 
-    font-size:11px;
+    font-size:12px;
 
     font-weight:bold;
 
 }
-.payment-box{
+
+
+
+.popular{
+
+    border:2px solid #00aaff;
+
+}
+.payment-card{
 
     max-width:700px;
 
     margin:auto;
 
-    padding:45px;
+    padding:50px;
 
-    background:#091522;
+    background:
 
-    border:1px solid rgba(0,170,255,.25);
+    linear-gradient(
+    145deg,
+    rgba(0,170,255,.18),
+    rgba(255,255,255,.04)
+    );
 
-    border-radius:30px;
+
+    border:1px solid rgba(0,170,255,.35);
+
+    border-radius:35px;
 
 }
 
@@ -556,7 +564,7 @@ nav a:hover{
 
 .payment-icon{
 
-    font-size:55px;
+    font-size:60px;
 
     margin-bottom:20px;
 
@@ -564,9 +572,9 @@ nav a:hover{
 
 
 
-.payment-box h3{
+.payment-card h3{
 
-    font-size:32px;
+    font-size:35px;
 
     margin-bottom:15px;
 
@@ -574,11 +582,11 @@ nav a:hover{
 
 
 
-.payment-box p{
+.payment-card p{
 
-    color:#9fb2c9;
+    color:#9caec2;
 
-    line-height:1.7;
+    font-size:18px;
 
     margin-bottom:30px;
 
@@ -586,17 +594,16 @@ nav a:hover{
 
 
 
+/* DISCORD */
 
-/* COMMUNITY */
 
+.discord-card{
 
-.community-box{
-
-    max-width:800px;
+    max-width:850px;
 
     margin:auto;
 
-    padding:60px 40px;
+    padding:70px 40px;
 
     background:
 
@@ -606,19 +613,30 @@ nav a:hover{
     rgba(255,255,255,.04)
     );
 
-    border-radius:35px;
 
     border:1px solid rgba(0,170,255,.4);
+
+    border-radius:40px;
 
 }
 
 
 
-.community-box p{
+.discord-card h2{
 
-    color:#a8bdd3;
+    margin-bottom:20px;
 
-    margin:20px 0 30px;
+}
+
+
+
+.discord-card p{
+
+    color:#b4c4d6;
+
+    font-size:20px;
+
+    margin-bottom:35px;
 
 }
 
@@ -629,11 +647,11 @@ nav a:hover{
 
 footer{
 
-    padding:60px 8%;
+    padding:70px 8%;
 
     text-align:center;
 
-    background:#03070d;
+    background:#020408;
 
     border-top:1px solid rgba(0,170,255,.15);
 
@@ -641,15 +659,13 @@ footer{
 
 
 
-.footer-brand{
+footer h2{
+
+    color:#00aaff;
 
     font-size:45px;
 
-    font-weight:1000;
-
     letter-spacing:8px;
-
-    color:#00aaff;
 
 }
 
@@ -657,9 +673,9 @@ footer{
 
 footer p{
 
-    color:#8fa5bb;
+    color:#9caec2;
 
-    margin:15px 0;
+    margin:20px 0;
 
 }
 
@@ -671,19 +687,11 @@ footer p{
 
     justify-content:center;
 
-    gap:30px;
+    gap:35px;
 
     flex-wrap:wrap;
 
-    margin:30px 0;
-
-}
-
-
-
-.footer-links a{
-
-    color:#9fb2c9;
+    margin:35px 0;
 
 }
 
@@ -700,12 +708,28 @@ footer p{
 /* MOBILE */
 
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 
 
 nav{
 
     display:none;
+
+}
+
+
+
+.pricing{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.feature-grid{
+
+    grid-template-columns:1fr;
 
 }
 
@@ -718,30 +742,22 @@ nav{
 }
 
 
-
-.support-grid{
-
-    grid-template-columns:1fr;
-
 }
 
 
 
-}
-
-
-@media(max-width:500px){
+@media(max-width:600px){
 
 
 .logo{
 
-    font-size:25px;
+    font-size:26px;
 
 }
 
 
 
-.discord-btn{
+.header-btn{
 
     display:none;
 
@@ -751,7 +767,7 @@ nav{
 
 .hero h1{
 
-    font-size:40px;
+    font-size:42px;
 
 }
 
@@ -759,29 +775,9 @@ nav{
 
 .section h2{
 
-    font-size:34px;
+    font-size:35px;
 
 }
 
-
-
-}
-.hidden{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:.8s ease;
-
-}
-
-
-
-.show{
-
-    opacity:1;
-
-    transform:translateY(0);
 
 }
