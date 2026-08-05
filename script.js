@@ -1,19 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Smooth button click feedback
+
+    // Button click animation
+
     const buttons = document.querySelectorAll("a");
+
 
     buttons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            button.style.transform = "scale(0.95)";
+            button.style.transform = "scale(.94)";
+
 
             setTimeout(() => {
 
                 button.style.transform = "";
 
-            }, 150);
+            },150);
 
         });
 
@@ -21,21 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // Reveal animations
-    const sections = document.querySelectorAll(
-        ".section, .support-card, .payment-box, .community-box"
+    // Scroll reveal animation
+
+    const items = document.querySelectorAll(
+        ".feature, .price-card, .payment-card, .discord-card"
     );
 
 
-    const observer = new IntersectionObserver((entries) => {
+    const reveal = new IntersectionObserver((entries)=>{
 
 
-        entries.forEach(entry => {
+        entries.forEach(entry=>{
 
 
             if(entry.isIntersecting){
 
-                entry.target.classList.add("show");
+                entry.target.classList.add("visible");
 
             }
 
@@ -43,19 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-    }, {
+    },{
 
-        threshold:0.15
+        threshold:.15
 
     });
 
 
 
-    sections.forEach(section => {
+    items.forEach(item=>{
 
-        section.classList.add("hidden");
+        item.classList.add("hidden");
 
-        observer.observe(section);
+        reveal.observe(item);
 
     });
 
