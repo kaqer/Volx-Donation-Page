@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    // Button click animation
-
     const buttons = document.querySelectorAll("a");
 
 
@@ -10,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            button.style.transform = "scale(.94)";
+            button.style.transform = "scale(.95)";
 
 
             setTimeout(() => {
@@ -25,14 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // Scroll reveal animation
-
-    const items = document.querySelectorAll(
-        ".feature, .price-card, .payment-card, .discord-card"
+    const cards = document.querySelectorAll(
+        ".price-card, .about-box, .payment-box, .discord-box"
     );
 
 
-    const reveal = new IntersectionObserver((entries)=>{
+    const observer = new IntersectionObserver((entries)=>{
 
 
         entries.forEach(entry=>{
@@ -40,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(entry.isIntersecting){
 
-                entry.target.classList.add("visible");
+                entry.target.classList.add("show");
 
             }
 
@@ -49,21 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     },{
-
         threshold:.15
-
     });
 
 
 
-    items.forEach(item=>{
+    cards.forEach(card=>{
 
-        item.classList.add("hidden");
+        card.classList.add("hidden");
 
-        reveal.observe(item);
+        observer.observe(card);
 
     });
-
 
 
 });
