@@ -1,17 +1,8 @@
-const buttons = document.querySelectorAll(".btn");
+document.querySelectorAll(".btn").forEach(button => {
 
+    button.addEventListener("click", () => {
 
-buttons.forEach(button => {
-
-    button.addEventListener("click", function(){
-
-        if(this.innerText === "Donate"){
-
-            alert(
-                "Thank you for supporting Project VOLX ❤️\n\nPayment setup coming soon."
-            );
-
-        }
+        console.log("VOLX button clicked");
 
     });
 
