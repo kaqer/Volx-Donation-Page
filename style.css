@@ -48,15 +48,15 @@ header{
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    background:rgba(5,7,11,.75);
+    justify-content:space-between;
 
-    backdrop-filter:blur(18px);
+    background:rgba(5,7,11,.8);
 
-    border-bottom:1px solid rgba(0,170,255,.15);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,170,255,.2);
 
     z-index:1000;
 
@@ -66,7 +66,7 @@ header{
 
 .logo{
 
-    font-size:34px;
+    font-size:36px;
 
     font-weight:1000;
 
@@ -90,7 +90,7 @@ nav{
 
 nav a{
 
-    color:#a9b6c6;
+    color:#aab7c5;
 
     transition:.3s;
 
@@ -116,18 +116,6 @@ nav a:hover{
 
     font-weight:900;
 
-    transition:.3s;
-
-}
-
-
-
-.header-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 0 30px rgba(0,170,255,.8);
-
 }
 
 
@@ -149,15 +137,15 @@ nav a:hover{
 
     text-align:center;
 
-    padding:120px 8% 60px;
-
     position:relative;
+
+    padding:120px 8% 60px;
 
 }
 
 
 
-.background{
+.hero-bg{
 
     position:absolute;
 
@@ -166,11 +154,8 @@ nav a:hover{
     background:
 
     linear-gradient(
-
     rgba(5,7,11,.55),
-
     rgba(5,7,11,1)
-
     ),
 
     url("17973036-48FB-4C2E-9E34-B42FD5C6E56C.png");
@@ -200,9 +185,9 @@ nav a:hover{
 
     color:#00aaff;
 
-    letter-spacing:6px;
-
     font-weight:900;
+
+    letter-spacing:6px;
 
     margin-bottom:25px;
 
@@ -223,7 +208,7 @@ nav a:hover{
 
 .hero p{
 
-    color:#b5c4d5;
+    color:#b4c4d6;
 
     font-size:21px;
 
@@ -233,7 +218,7 @@ nav a:hover{
 
 
 
-.hero-buttons{
+.buttons{
 
     margin-top:45px;
 
@@ -242,7 +227,7 @@ nav a:hover{
 
 
 .main-btn,
-.second-btn{
+.outline-btn{
 
     display:inline-block;
 
@@ -252,9 +237,9 @@ nav a:hover{
 
     border-radius:50px;
 
-    font-weight:900;
-
     font-size:18px;
+
+    font-weight:900;
 
     transition:.3s;
 
@@ -274,13 +259,13 @@ nav a:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:0 0 40px rgba(0,170,255,.8);
+    box-shadow:0 0 35px #00aaff;
 
 }
 
 
 
-.second-btn{
+.outline-btn{
 
     border:2px solid #00aaff;
 
@@ -288,11 +273,12 @@ nav a:hover{
 
 
 
-.second-btn:hover{
+.outline-btn:hover{
 
     background:#00aaff;
 
 }
+
 
 
 
@@ -320,53 +306,62 @@ nav a:hover{
 
 
 
-/* ABOUT */
+/* CARDS */
 
 
-.about-box{
+.cards{
 
-    max-width:850px;
+    max-width:1200px;
 
     margin:auto;
 
-    padding:50px;
+    display:grid;
 
-    background:rgba(255,255,255,.04);
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    padding:40px;
+
+    background:rgba(255,255,255,.05);
 
     border:1px solid rgba(0,170,255,.2);
 
-    border-radius:35px;
+    border-radius:30px;
 
 }
 
 
 
-.about-box h3{
+.card h3{
 
-    font-size:35px;
+    font-size:28px;
 
-    margin-bottom:20px;
-
-}
-
-
-
-.about-box p{
-
-    color:#a9b6c6;
-
-    font-size:19px;
+    margin-bottom:15px;
 
 }
 
 
 
+.card p{
+
+    color:#aab7c5;
+
+}
 
 
-/* PRICING */
 
 
-.pricing-grid{
+/* PACKAGES */
+
+
+.packages{
 
     max-width:1300px;
 
@@ -382,7 +377,7 @@ nav a:hover{
 
 
 
-.price-card{
+.package{
 
     padding:40px 30px;
 
@@ -398,27 +393,25 @@ nav a:hover{
 
 
 
-.price-card:hover{
+.package:hover{
 
     transform:translateY(-10px);
 
     border-color:#00aaff;
 
-    box-shadow:0 0 35px rgba(0,170,255,.25);
+}
+
+
+
+.package h3{
+
+    font-size:26px;
 
 }
 
 
 
-.price-card h3{
-
-    font-size:25px;
-
-}
-
-
-
-.price-card h4{
+.package h4{
 
     font-size:45px;
 
@@ -428,34 +421,32 @@ nav a:hover{
 
 
 
-.price-card p{
+.package p{
 
-    color:#9caec2;
+    color:#aab7c5;
 
     margin-bottom:30px;
-
-    min-height:55px;
 
 }
 
 
 
-.price-btn{
+.buy-btn{
 
     display:block;
 
-    padding:16px;
-
     background:#00aaff;
+
+    padding:16px;
 
     border-radius:50px;
 
     font-weight:900;
 
 }
-.payment-box{
+.payment-card{
 
-    max-width:700px;
+    max-width:750px;
 
     margin:auto;
 
@@ -468,7 +459,6 @@ nav a:hover{
     rgba(0,170,255,.2),
     rgba(255,255,255,.04)
     );
-
 
     border:1px solid rgba(0,170,255,.35);
 
@@ -488,7 +478,7 @@ nav a:hover{
 
 
 
-.payment-box h3{
+.payment-card h3{
 
     font-size:35px;
 
@@ -498,9 +488,9 @@ nav a:hover{
 
 
 
-.payment-box p{
+.payment-card p{
 
-    color:#a9b6c6;
+    color:#aab7c5;
 
     margin-bottom:35px;
 
@@ -509,16 +499,44 @@ nav a:hover{
 
 
 
-/* DISCORD */
+
+.after-payment{
+
+    margin-top:45px;
+
+    padding:35px;
+
+    background:rgba(0,170,255,.08);
+
+    border-radius:25px;
+
+    border:1px solid rgba(0,170,255,.25);
+
+}
 
 
-.discord-box{
+
+.after-payment h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+.discord-card{
 
     max-width:850px;
 
     margin:auto;
 
     padding:70px 40px;
+
+    border-radius:40px;
 
     background:
 
@@ -528,16 +546,13 @@ nav a:hover{
     rgba(255,255,255,.05)
     );
 
-
-    border:1px solid rgba(0,170,255,.4);
-
-    border-radius:40px;
+    border:1px solid rgba(0,170,255,.35);
 
 }
 
 
 
-.discord-box h2{
+.discord-card h2{
 
     margin-bottom:20px;
 
@@ -545,11 +560,9 @@ nav a:hover{
 
 
 
-.discord-box p{
+.discord-card p{
 
-    color:#a9b6c6;
-
-    font-size:20px;
+    color:#aab7c5;
 
     margin-bottom:35px;
 
@@ -557,9 +570,6 @@ nav a:hover{
 
 
 
-
-
-/* FOOTER */
 
 
 footer{
@@ -590,7 +600,7 @@ footer h2{
 
 footer p{
 
-    color:#9caec2;
+    color:#aab7c5;
 
     margin:20px;
 
@@ -608,8 +618,6 @@ footer p{
 
     flex-wrap:wrap;
 
-    margin:30px 0;
-
 }
 
 
@@ -624,9 +632,6 @@ footer p{
 
 
 
-/* MOBILE */
-
-
 @media(max-width:1000px){
 
 
@@ -638,7 +643,15 @@ nav{
 
 
 
-.pricing-grid{
+.packages{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.cards{
 
     grid-template-columns:1fr;
 
@@ -662,7 +675,7 @@ nav{
 
 .logo{
 
-    font-size:27px;
+    font-size:28px;
 
 }
 
@@ -684,20 +697,10 @@ nav{
 
 
 
-.hero p{
-
-    font-size:17px;
-
-}
-
-
-
 .main-btn,
-.second-btn{
+.outline-btn{
 
     width:100%;
-
-    margin:10px 0;
 
 }
 
@@ -706,25 +709,6 @@ nav{
 .section{
 
     padding:70px 5%;
-
-}
-
-
-
-.section h2{
-
-    font-size:34px;
-
-}
-
-
-
-.price-card,
-.about-box,
-.payment-box,
-.discord-box{
-
-    padding:30px 20px;
 
 }
 
