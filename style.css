@@ -800,3 +800,81 @@ nav{
     transform:translateY(0);
 
 }
+@media(max-width:600px){
+
+    header{
+        padding:20px 5%;
+    }
+
+
+    .logo{
+        font-size:28px;
+        letter-spacing:5px;
+    }
+
+
+    .hero{
+        padding:120px 5% 60px;
+    }
+
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.05;
+    }
+
+
+    .hero p{
+        font-size:17px;
+    }
+
+
+    .main-btn,
+    .second-btn{
+
+        width:100%;
+        margin:10px 0;
+        padding:18px;
+
+    }
+
+
+    .section{
+
+        padding:70px 5%;
+
+    }
+
+
+    .section h2{
+
+        font-size:34px;
+
+    }
+
+
+    .feature,
+    .price-card,
+    .payment-card,
+    .discord-card{
+
+        padding:30px 20px;
+
+    }
+
+
+    .price-card h4{
+
+        font-size:38px;
+
+    }
+
+
+    .footer-links{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+}
