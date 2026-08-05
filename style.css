@@ -781,3 +781,22 @@ nav{
 
 
 }
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s ease;
+
+}
+
+
+
+.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
